@@ -10,7 +10,9 @@ const uri = "mongodb+srv://adrianrojasortuno44:8EJSdvdagAQQ4R3m@cluster0.aetfj.m
 //middleware
 app.use(express.json());
 app.use('/api', movieRoutes);
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:4200',
+}));
 
 
 //rutas
