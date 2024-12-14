@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import movieRoutes from './routes/movie.route.js';
+import cors from 'cors';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -9,6 +10,7 @@ const uri = "mongodb+srv://adrianrojasortuno44:8EJSdvdagAQQ4R3m@cluster0.aetfj.m
 //middleware
 app.use(express.json());
 app.use('/api', movieRoutes);
+app.use(cors());
 
 
 //rutas
