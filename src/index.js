@@ -8,11 +8,11 @@ const port = process.env.PORT || 3000;
 const uri = "mongodb+srv://adrianrojasortuno44:8EJSdvdagAQQ4R3m@cluster0.aetfj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 //middleware
-app.use(express.json());
-app.use('/api', movieRoutes);
 app.use(cors({
     origin: 'http://localhost:4200',
 }));
+app.use(express.json());
+app.use('/api', movieRoutes);
 
 
 //rutas
