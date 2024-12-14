@@ -9,7 +9,7 @@ const uri = "mongodb+srv://adrianrojasortuno44:8EJSdvdagAQQ4R3m@cluster0.aetfj.m
 
 //middleware
 app.use(cors({
-    origin: 'http://localhost:4200',
+    origin: ['http://localhost:4200', 'https://adrianrojas4414.github.io'],
 }));
 app.use(express.json());
 app.use('/api', movieRoutes);
